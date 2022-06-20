@@ -1,0 +1,62 @@
+# ---------------------------------------------------------------------- #
+#                This Menu Was Made Using DeluxeMenus 1.12.0             #
+#            And converted to zMenu using the zMenuConvert plugin        #
+# ---------------------------------------------------------------------- #
+#                                                                        #
+# Add the menu to the zMenu/inventories folder                           #
+# You must then do /zm reload                                            #
+# To open the inventory you must do /zm open zmenu:kit                   #
+# ---------------------------------------------------------------------- #
+name: "&aKits Menu"
+size: 27
+updateInterval: 1
+items:
+  '13':
+    type: NONE
+    slot: 13
+    update: true
+    refreshOnClick: true
+    permission: essentials.kits.example
+    action: EQUALSIGNORECASE_STRING
+    placeHolder: '%essentials_kit_is_available_example%'
+    value: 'no'
+    item:
+      material: ORANGE_CONCRETE
+      name: ' '
+      lore:
+        - '&8• &bKit: &7Example'
+        - '&8• &bStatus: &7On Cooldown'
+        - '&8• &bAvailable In: &7%essentials_kit_time_until_available_example%'
+        - ''
+    else:
+      type: PERFORM_COMMAND
+      slot: 13
+      update: true
+      refreshOnClick: true
+      commands:
+        - essentials:kit example
+      permission: essentials.kits.example
+      action: EQUALSIGNORECASE_STRING
+      placeHolder: '%essentials_kit_is_available_example%'
+      value: 'yes'
+      item:
+        material: LIME_CONCRETE
+        name: ' '
+        lore:
+          - '&8• &bKit: &7Example'
+          - '&8• &bStatus: &7Available'
+          - ''
+          - '&8» &b&nClick to Claim'
+          - ''
+      else:
+        type: NONE
+        slot: 13
+        update: true
+        closeInventory: true
+        item:
+          material: RED_CONCRETE
+          name: ' '
+          lore:
+            - '&8• &bKit: &7Example'
+            - '&8• &bStatus: &7Locked'
+            - ''
