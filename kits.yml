@@ -6,6 +6,8 @@
 # Add the menu to the zMenu/inventories folder                           #
 # You must then do /zm reload                                            #
 # To open the inventory you must do /zm open zmenu:kit                   #
+# Docs: https://zmenu.groupez.dev/                                       #
+#                                                                        #
 # ---------------------------------------------------------------------- #
 name: "&aKits Menu"
 size: 27
