@@ -1,0 +1,124 @@
+# ---------------------------------------------------------------------- #
+#                This Menu Was Made Using DeluxeMenus 1.12.0             #
+#            And converted to zMenu using the zMenuConvert plugin        #
+# ---------------------------------------------------------------------- #
+#                                                                        #
+# Add the menu to the zMenu/inventories folder                           #
+# You must then do /zm reload                                            #
+# To open the inventory you must do /zm open zmenu:kit                   #
+# Docs: https://zmenu.groupez.dev/                                       #
+#                                                                        #
+# ---------------------------------------------------------------------- #
+name: Requirements Menu
+size: 9
+updateInterval: 10
+items:
+  '0':
+    type: PERFORM_COMMAND
+    slot: 0
+    # More informations about actions here: https://zmenu.groupez.dev/configurations/buttons#actions
+    actions:
+      right_click_requirement:
+        clicks:
+          - RIGHT
+        allow:
+          messages:
+            - '&aYou sold 1 &6GOLD_BLOCK &afor $50'
+          consoleCommands:
+            - clear %player_name% GOLD_BLOCK 1
+            - eco give %player% 50
+        deny:
+          messages:
+            - '&cYou don''t have enough &6GOLD_BLOCK &cto sell! Required: 1'
+        permissions:
+      item_1:
+        material: GOLD_BLOCK
+        amount: 1
+      left_click_requirement:
+        clicks:
+          - LEFT
+        allow:
+          messages:
+            - '&aYou bought 1 &6GOLD_BLOCK &afor $100'
+          consoleCommands:
+            - give %player_name% GOLD_BLOCK 1
+            - eco take %player% 100
+        deny:
+          messages:
+            - '&cYou don''t have enough money for this!'
+        permissions:
+          placeholder_1:
+            action: SUPERIOR_OR_EQUAL
+            placeHolder: '%vault_eco_balance%'
+            value: 100
+      shift_left_click_requirement:
+        clicks:
+          - SHIFT_LEFT
+        allow:
+          messages:
+            - '&aYou bought 64 &6GOLD_BLOCK &afor $6400'
+          consoleCommands:
+            - give %player_name% GOLD_BLOCK 64
+            - eco take %player% 6400
+        deny:
+          messages:
+            - '&cYou don''t have enough money for this!'
+        permissions:
+          placeholder_1:
+            action: SUPERIOR_OR_EQUAL
+            placeHolder: '%vault_eco_balance%'
+            value: 6400
+      shift_right_click_requirement:
+        clicks:
+          - SHIFT_RIGHT
+        allow:
+          messages:
+            - '&aYou sold 64 &6GOLD_BLOCK &afor $3200'
+          consoleCommands:
+            - clear %player_name% GOLD_BLOCK 64
+            - eco give %player% 3200
+        deny:
+          messages:
+            - '&cYou don''t have enough &6GOLD_BLOCK &cto sell! Required: 64'
+        permissions:
+          item_1:
+            material: GOLD_BLOCK
+            amount: 64
+    item:
+      material: GOLD_BLOCK
+      lore:
+        - '&7Buy/Sell GOLD_BLOCK'
+        - ''
+        - '&7- Left-click: &bBuy 1 &7for &a$100'
+        - '&7- Right-click: &bSell 1 &7for &a$50'
+        - '&7- Shift-left-click: &bBuy 64 &7for &a6,400'
+        - '&7- Shift-right-click: &bSell 64 &7for &a$3,200'
+  '1':
+    type: PERFORM_COMMAND
+    slot: 1
+    refreshOnClick: true
+    consoleRightCommands:
+      - give %player_name% DIAMOND 1
+      - lp user %player_name% permission settemp deluxemenus.free_diamonds.cooldown
+        true 1d
+    consoleLeftCommands:
+      - give %player_name% DIAMOND 1
+      - lp user %player_name% permission settemp deluxemenus.free_diamonds.cooldown
+        true 1d
+    permission: '!deluxemenus.free_diamonds.cooldown'
+    item:
+      material: DIAMOND
+      lore:
+        - '&aFREE DIAMOND! [1/day]'
+        - ''
+        - '&7Click to get 1 free &bdiamond&7!'
+    else:
+      type: NONE
+      slot: 1
+      refreshOnClick: true
+      item:
+        material: STONE
+        lore:
+          - '&aFREE DIAMOND! [1/day]'
+          - ''
+          - '&cYou''re currently on cooldown. Click to refresh.'
