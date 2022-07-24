@@ -1,0 +1,8 @@
+name: zMenuExample
+author: Maxlego08
+main: fr.zmenu.example.ExamplePlugin
+website: https://groupez.dev
+version: 1.0.0
+api-version: 1.13
+softdepend:
+- zMenu
