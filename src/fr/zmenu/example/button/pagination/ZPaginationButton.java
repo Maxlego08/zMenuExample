@@ -11,7 +11,7 @@ import fr.maxlego08.menu.inventory.inventories.InventoryDefault;
 import fr.maxlego08.menu.zcore.utils.inventory.Pagination;
 import fr.zmenu.example.ExamplePlugin;
 
-public class ZPaginationButton extends ZSlotButton {
+public class ZPaginationButton extends ZSlotButton implements PaginationButton{
 
 	private final ExamplePlugin plugin;
 
