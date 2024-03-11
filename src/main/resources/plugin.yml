@@ -1,0 +1,10 @@
+name: zMenuExample
+author: Maxlego08
+main: fr.maxlego08.example.ExamplePlugin
+website: https://groupez.dev
+description: zMenuExample
+version: 1.0.0
+api-version: 1.13
+loadbefore:
+  - zMenu
+commands:
