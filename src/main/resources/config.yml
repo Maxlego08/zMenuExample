@@ -1,0 +1,6 @@
+example-item:
+  material: PAPER
+  name: "&fExample Item"
+  lore:
+    - "&fThis is an example item"
+    - "&fYou can use it to test zMenu"

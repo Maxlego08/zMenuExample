@@ -1,6 +1,6 @@
 name: zMenuExample
 version: '1.0.0'
-main: fr.maxlego08.example.zMenuExample.ZMenuExample
+main: fr.maxlego08.example.ZMenuExample
 api-version: '1.21'
 authors: [Maxlego08]
 description: Example for zMenu
