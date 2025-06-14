@@ -1,0 +1,33 @@
+name: "&8Example &f%page%&8/&f%max-page%"
+size: 18
+buttons:
+
+  basic:
+    type: BASIC_EXAMPLE
+    slot: 10
+    key-example: basic
+    item:
+      material: DIAMOND
+      name: "&7Basic"
+
+  pagination:
+    type: PAGINATION_EXAMPLE
+    slots:
+      - 0-8
+    item:
+      material: BOOK
+      name: "&7Book&8: &f%book%"
+
+  next:
+    type: NEXT
+    slot: 17
+    item:
+      material: ARROW
+      name: "&7Next page"
+
+  previous:
+    type: PREVIOUS
+    slot: 9
+    item:
+      material: ARROW
+      name: "&7Previous page"
