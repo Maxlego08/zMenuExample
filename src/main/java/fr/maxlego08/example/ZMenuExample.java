@@ -25,7 +25,7 @@ public final class ZMenuExample extends JavaPlugin {
         PatternManager patternManager = getProvider(PatternManager.class);
 
         inventoryManager.registerMaterialLoader(new ExampleMaterialLoader());
-        
+
         buttonManager.register(new BasicLoader(this));
         buttonManager.register(new NoneLoader(this, BooksButton.class, "PAGINATION_EXAMPLE"));
 
